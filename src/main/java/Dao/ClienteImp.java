@@ -106,8 +106,29 @@ public class ClienteImp implements ICliente {
 	}  //fin del metodo listar....
 
 	public TblCliente BuscarCliente(TblCliente cliente) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		EntityManagerFactory emf=Persistence.createEntityManagerFactory("ProyectoJPAWebMiercoles");
+		//para administrar las transacciones
+		EntityManager em=emf.createEntityManager();
+		//para el listado
+		TblCliente buscarcodigo=null;
+		try{
+			//iniciamos la transaccion..
+			em.getTransaction().begin();
+			//hacemos la consulta JPQL
+			buscarcodigo=em.find(TblCliente.class, cliente.getIdcliente());
+		     //confirmamos
+			em.getTransaction().commit();
+		
+		}catch(RuntimeException e){
+			System.out.println(e.getMessage());
+		}finally{
+			//cerramos
+			em.close();
+		}  //fin del finally
+		//retornamos el listado
+		return buscarcodigo;
+		
 	}  //fin del metodo buscar....
 
 } //fin de la clase...
