@@ -44,7 +44,7 @@ public class TestTblCliente {
         System.out.println("dato eliminado de la BD");
         */
         
-        //testear el listado
+        /*//testear el listado
         List<TblCliente> listado=climp.ListarCliente();
         //aplicamos un bucle for
         for(TblCliente lis:listado){
@@ -58,6 +58,20 @@ public class TestTblCliente {
         			" telefono "+lis.getTelfcliente()+
         			" sexo "+lis.getSexcliente());
         } //fin del bucle for...
+        
+        
+*/
+        
+	//testear metodo buscar...
+        //codigo a buscar
+        cliente.setIdcliente(1);
+        TblCliente buscliente=climp.BuscarCliente(cliente);
+        System.out.println(" codigo "+buscliente.getIdcliente()+" nombre "+buscliente.getNomcliente()+" apellido "+
+        buscliente.getApecliente()+" telefono "+buscliente.getTelfcliente()
+        +" email" +buscliente.getEmailcliente());
+	
+	
+	
 	} //fin del metodo principal.....
 
 } //fin de la clase...

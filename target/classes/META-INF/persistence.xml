@@ -6,7 +6,7 @@
 		<class>Modelo.TblUsuario</class>
 	
 		<properties>
-		<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3307/bdjpamiercoles?serverTimezone=UTC"></property>
+		<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3307/jpamiercoles?serverTimezone=UTC"></property>
 		<property name="javax.persistence.jdbc.user" value="root"></property>
 		<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"></property>
 		<property name="javax.persistence.jdbc.password" value=""></property>
